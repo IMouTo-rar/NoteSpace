@@ -1,8 +1,10 @@
 .sidebar-block {
     width: 3rem;
     height: 100vh;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: overlay;
 
     position: absolute;
     left: 0;
@@ -10,8 +12,35 @@
     background-color: beige;
 }
 
+.sidebar-block :hover :after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 @media (prefers-color-scheme: dark) {
     .sidebar-block {
         background-color: rgba(32, 32, 32, 100);
-    }    
+    }
+}
+
+/* 设置滚动条的宽度 */
+::-webkit-scrollbar {
+    width: 3px;
+    /* 设置滚动条的宽度 */
+}
+
+/* 设置滚动条轨道的样式 */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* 设置滚动条轨道的背景色 */
+}
+
+/* 设置滚动条滑块的样式 */
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* 设置滚动条滑块的背景色 */
 }
