@@ -1,0 +1,10 @@
+.App {
+    user-select:none;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.function-block {
+    margin: 2rem;
+}

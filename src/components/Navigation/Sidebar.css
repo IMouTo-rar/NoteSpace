@@ -1,0 +1,17 @@
+.sidebar-block {
+    width: 3rem;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: beige;
+}
+
+@media (prefers-color-scheme: dark) {
+    .sidebar-block {
+        background-color: rgba(32, 32, 32, 100);
+    }    
+}
