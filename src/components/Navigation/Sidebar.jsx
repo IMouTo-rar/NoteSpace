@@ -7,10 +7,15 @@ function Sidebar() {
     // TODO: Add sidebar
     return (
         <div className='sidebar-block'>
-            <SidebarButton />
-            <SidebarButton />
-            <SidebarButton />
-            <SidebarButton />
+            <div className='dynamic-area'>
+                <SidebarButton label={'Home'}/>
+                <SidebarButton label={'Files'}/>
+                <SidebarButton label={'Search'}/>
+            </div>
+            <div className='static-area'>
+                <SidebarButton label={'Account'}/>
+                <SidebarButton label={'Settings'}/>
+            </div>
         </div>
     )
 }
