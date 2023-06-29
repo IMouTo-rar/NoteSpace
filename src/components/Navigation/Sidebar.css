@@ -4,8 +4,6 @@
     border-right: 1px solid rgba(0, 0, 0, 0.5);
 
     display: grid;
-
-    background-color: beige;
 }
 
 /* 两部分分别渲染 */
