@@ -8,9 +8,10 @@
     top: 0;
 
     display: grid;
+    grid-template-columns: 3rem auto 1fr;
+    grid-column-gap: 1px;
 
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .function-block {

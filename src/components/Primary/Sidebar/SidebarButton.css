@@ -6,11 +6,11 @@
     display: grid;
     place-items: center;
 
-    color: rgba(170, 184, 194, 1);
+    color: var(--icon-color);
 }
 
 .sidebar-button :hover{
-    color: rgba(82, 97, 107, 1);
+    color: var(--icon-hover-color);
 }
 
 .icon {

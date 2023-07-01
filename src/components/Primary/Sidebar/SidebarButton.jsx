@@ -14,7 +14,9 @@ function SidebarButton({label, icon}) {
 
     return (
         <div className='sidebar-button'>
-            {ButtonRender(label, icon)}
+            <div>
+                {ButtonRender(label, icon)}
+            </div>
         </div>
     )
 }

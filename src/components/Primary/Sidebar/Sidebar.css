@@ -1,8 +1,8 @@
 .sidebar-block {
     width: 3rem;
-    height: 100vh;
-    border-right: 1px solid rgba(0, 0, 0, 0.5);
-
+    height: 100%;
+    border-right: var(--border-color) 1px solid ;
+    background-color: var(--sidebar-background-color);
     display: grid;
 }
 
@@ -20,19 +20,12 @@
     overflow-x: hidden;
     overflow-y: overlay;
     max-height: calc(100vh - 7rem);
-
     align-self: start;
 }
 
 /* 静态部分 - 按键数量固定 */
 .static-area {
     align-self: end;
-}
-
-@media (prefers-color-scheme: dark) {
-    .sidebar-block {
-        background-color: rgba(32, 32, 32, 100);
-    }
 }
 
 /* 设置滚动条的宽度 */

@@ -1,5 +1,5 @@
 import React from 'react';
-import SidebarButton from '../Common/SidebarButton';
+import SidebarButton from './SidebarButton';
 
 import './Sidebar.css';
 

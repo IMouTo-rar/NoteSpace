@@ -1,0 +1,8 @@
+.activityBar-block {
+    width: 15rem;
+    height: 100%;
+    border-right: var(--border-color) 1px solid;
+    background-color: var(--sidebar-background-color);
+
+    display: grid;
+}

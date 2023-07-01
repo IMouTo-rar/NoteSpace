@@ -1,15 +1,17 @@
 import React from 'react';
 import './App.css';
 
-import Music from './components/Meida/Music';
-import Sidebar from './components/Navigation/Sidebar';
+import { ActivityBar, Sidebar, Panel } from './components/Primary';
 
 function App() {
-  return (
-    <div className='App'>
-      <Sidebar />
-    </div>
-  )
+
+    return (
+        <div className={`App`}>
+            <Sidebar />
+            <ActivityBar />
+            <Panel />
+        </div>
+    )
 }
 
 export default App;
