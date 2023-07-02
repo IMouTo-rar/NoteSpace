@@ -1,6 +1,38 @@
 import React from 'react';
 import './SidebarButton.css';
 
+import Icon from '../Icon/Icon';
+import { selectedButtonAtom, selectedButtonLabelSelector } from '../../Atom/SidebarAtom'; 
+import { useRecoilState, useRecoilValue } from 'recoil';
+
+function SidebarButton({ label, icon }) {
+    const selectedButtonLabel = useRecoilValue(selectedButtonLabelSelector);
+    const [selectedButton, setSelectedButton] = useRecoilState(selectedButtonAtom);
+
+    const handleClick = () => {
+        setSelectedButton(selectedButtonLabel == label ? null : label);
+    }
+
+    return (
+        <div className='sidebar-button'>
+            <div
+                className={`button-box ${selectedButtonLabel == label ? 'selected' : ''}`}
+                label={label}
+                onClick={handleClick}
+            >
+                <Icon label={label} icon={icon} />
+            </div>
+        </div>
+    )
+
+};
+
+export default SidebarButton;
+
+/*
+import React from 'react';
+import './SidebarButton.css';
+
 import { VscHome } from 'react-icons/vsc';
 import { VscFiles } from 'react-icons/vsc';
 import { VscSearch } from 'react-icons/vsc';
@@ -51,3 +83,4 @@ function ButtonIcon(label, icon) {
 }
 
 export default SidebarButton;
+*/
