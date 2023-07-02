@@ -26,7 +26,7 @@ function ButtonRender(label, icon) {
         case 'Home':
             return <VscHome className='icon' style={{width: '1.8rem', height: '1.8rem'}}/>;
         case 'Files':
-            return <VscFiles className='icon' />;
+            return <VscFiles className={`icon selected`} />;
         case 'Search':
             return <VscSearch className='icon' />;
         case 'Info':

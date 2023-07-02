@@ -8,10 +8,12 @@
     top: 0;
 
     display: grid;
-    grid-template-columns: 3rem auto 1fr;
-    grid-column-gap: 1px;
+    grid-template-columns: auto auto 1fr;
 
     overflow: hidden;
+
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 .function-block {

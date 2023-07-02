@@ -9,7 +9,7 @@
     color: var(--icon-color);
 }
 
-.sidebar-button :hover{
+.sidebar-button :hover {
     color: var(--icon-hover-color);
 }
 
@@ -17,4 +17,3 @@
     width: 1.5rem;
     height: 1.5rem;
 }
-
