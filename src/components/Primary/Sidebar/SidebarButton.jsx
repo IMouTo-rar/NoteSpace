@@ -1,4 +1,5 @@
 import React from 'react';
+import './SidebarButton.css';
 
 import { VscHome } from 'react-icons/vsc';
 import { VscFiles } from 'react-icons/vsc';
@@ -8,20 +9,29 @@ import { VscAccount } from 'react-icons/vsc';
 import { VscGear } from 'react-icons/vsc';
 import { VscCircleSlash } from 'react-icons/vsc';
 
-import './SidebarButton.css';
+import { atomFamily, useRecoilState } from 'recoil';
+
+const sidebarButtonState = atomFamily({
+    key: 'sidebarButtonState',
+    default: false,
+})
 
 function SidebarButton({label, icon}) {
+    const [selected, setSelected] = useRecoilState(sidebarButtonState(label));
+    const handleClick = () => {
+        setSelected(!selected);
+    }
 
     return (
         <div className='sidebar-button'>
-            <div>
-                {ButtonRender(label, icon)}
+            <div className={`button-box ${selected ? 'selected' : ''}`} onClick={handleClick}>
+                {ButtonIcon(label, icon)}
             </div>
         </div>
     )
 }
 
-function ButtonRender(label, icon) {
+function ButtonIcon(label, icon) {
     switch (label) {
         case 'Home':
             return <VscHome className='icon' style={{width: '1.8rem', height: '1.8rem'}}/>;
