@@ -1,6 +1,6 @@
 import React from 'react';
 import './Panel.css';
-import { ThemeSwitcher } from '../../Theme/Theme';
+import { ThemeSwitcher } from '../../Atom';
 
 function Panel() {
     return (

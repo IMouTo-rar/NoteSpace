@@ -2,7 +2,7 @@ import React from 'react';
 import './SidebarButton.css';
 
 import Icon from '../Icon/Icon';
-import { selectedButtonAtom, selectedButtonLabelSelector } from '../../Atom/SidebarAtom'; 
+import { selectedButtonAtom, selectedButtonLabelSelector } from '../../Atom'; 
 import { useRecoilState, useRecoilValue } from 'recoil';
 
 function SidebarButton({ label, icon }) {
