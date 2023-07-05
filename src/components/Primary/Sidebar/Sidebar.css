@@ -1,4 +1,7 @@
 .sidebar-block {
+    grid-area: 'sidebar-block';
+    grid-column: 1;
+
     width: 3rem;
     height: 100%;
     border-right: var(--border-color) 1px solid;

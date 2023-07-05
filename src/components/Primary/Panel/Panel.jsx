@@ -1,14 +1,13 @@
 import React from 'react';
 import './Panel.css';
-import { ThemeSwitcher } from '../../Atom';
+
+import Music from '../../../user-components/Media/Music';
 
 function Panel() {
     return (
         <div className='panel-block'>
-
             Panel
-            <br />
-            <ThemeSwitcher />
+            <Music />
         </div>
     )
 };

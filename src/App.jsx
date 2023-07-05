@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { ActivityBar, Sidebar, Panel } from './components/Primary';
+import { ActivityBar, Sidebar, Panel, Footer } from './components/Primary';
 import { ThemeProvider } from './components/Theme';
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
                 <Sidebar />
                 <ActivityBar />
                 <Panel />
+                <Footer />
             </div>
         </ThemeProvider>
         

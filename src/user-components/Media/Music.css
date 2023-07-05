@@ -1,0 +1,45 @@
+.music-player {
+    width: 15rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 1rem;
+}
+
+.play-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-button.playing {
+    background-color: #0f0;
+}
+
+.play-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+}
+
+.song-info {
+    margin-left: 20px;
+}
+
+.song-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.song-artist {
+    font-size: 14px;
+    color: #666;
+}

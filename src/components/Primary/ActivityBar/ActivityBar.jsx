@@ -1,17 +1,41 @@
-import React from 'react'
+import React from 'react';
+import { useRecoilValue } from 'recoil';
+import { activityBarResizeAtom } from '../../Atom';
+import { selectedButtonLabelSelector } from '../../Atom';
+import './ActivityBar.css';
 
-import { activityBarResizeAtom } from '../../Atom'
-import './ActivityBar.css'
+import { Account, Files, Home, Info, Search, Settings } from '../../Page/Activity';
 
 function ActivityBar() {
+    const selectedButtonLabel = useRecoilValue(selectedButtonLabelSelector);
 
     return (
-        <div className='activityBar-block'>
+        <div className={`activityBar-block ${selectedButtonLabel ? '':'retracted'}`}>
             <div className='resizable'>
-                Resizable Bar
+                {Activity(selectedButtonLabel)}
             </div>
         </div>
+
     );
+}
+
+function Activity(selectedButtonLabel) {
+    switch (selectedButtonLabel) {
+        case 'Home':
+            return <Home />;
+        case 'Files':
+            return <Files />;
+        case 'Search':
+            return <Search />;
+        case 'Info':
+            return <Info />;
+        case 'Account':
+            return <Account />;
+        case 'Settings':
+            return <Settings />;
+        default:
+            return <Home />;
+    }
 }
 
 export default ActivityBar;

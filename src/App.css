@@ -6,16 +6,13 @@
     position: absolute;
     left: 0;
     top: 0;
-
+    
     display: grid;
     grid-template-columns: auto auto 1fr;
-
+    grid-template-rows: 1fr auto;
+    
     overflow: hidden;
 
     color: var(--text-color);
     background-color: var(--background-color);
-}
-
-.function-block {
-    margin: 2rem;
 }

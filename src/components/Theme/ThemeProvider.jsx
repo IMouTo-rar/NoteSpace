@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil';
-import { themeClass } from './Theme';
+import { themeClass } from '../Atom';
 
 // 引入主题颜色样式
 import './CSS/dark-theme.css';
