@@ -1,6 +1,5 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { activityBarResizeAtom } from '../../Atom';
 import { selectedButtonLabelSelector } from '../../Atom';
 import './ActivityBar.css';
 
@@ -10,10 +9,10 @@ function ActivityBar() {
     const selectedButtonLabel = useRecoilValue(selectedButtonLabelSelector);
 
     return (
-        <div className={`activityBar-block ${selectedButtonLabel ? '':'retracted'}`}>
-            <div className='resizable'>
-                {Activity(selectedButtonLabel)}
-            </div>
+        <div className={`activityBar-block ${selectedButtonLabel ? '' : 'retracted'}`}>
+
+            {Activity(selectedButtonLabel)}
+
         </div>
 
     );

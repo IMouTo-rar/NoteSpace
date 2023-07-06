@@ -2,12 +2,12 @@ import React from 'react';
 import './SidebarButton.css';
 
 import Icon from '../Icon/Icon';
-import { selectedButtonAtom, selectedButtonLabelSelector } from '../../Atom'; 
+import { selectedButton, selectedButtonLabelSelector } from '../../Atom'; 
 import { useRecoilState, useRecoilValue } from 'recoil';
 
 function SidebarButton({ label, icon }) {
     const selectedButtonLabel = useRecoilValue(selectedButtonLabelSelector);
-    const [selectedButton, setSelectedButton] = useRecoilState(selectedButtonAtom);
+    const [selectedButtonAtom, setSelectedButton] = useRecoilState(selectedButton);
 
     const handleClick = () => {
         setSelectedButton(selectedButtonLabel == label ? null : label);

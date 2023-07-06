@@ -1,7 +1,7 @@
 import React from 'react';
 import { atom, selector } from 'recoil';
 
-export const selectedButtonAtom = atom({
+export const selectedButton = atom({
     key: 'selectedButton',
     default: null,
 });
@@ -9,7 +9,7 @@ export const selectedButtonAtom = atom({
 export const selectedButtonLabelSelector = selector({
     key: 'selectedButtonLabel',
     get: ({ get }) => {
-        const selectedButton = get(selectedButtonAtom);
-        return selectedButton ? selectedButton : null;
+        const selectedButtonLabel = get(selectedButton);
+        return selectedButtonLabel ? selectedButtonLabel : null;
     }
 });
