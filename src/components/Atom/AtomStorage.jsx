@@ -4,7 +4,8 @@ import { selectedTheme } from './Theme';
 import { useRecoilValue } from 'recoil';
 import { invoke } from '@tauri-apps/api';
 
-export const saveRecoilStateToConfig = async () => {
+export const saveRecoilStateToConfig = () => {
+    /*
     // 获取需要本地保存的Atom
     const selectedButtonAtom = useRecoilValue(selectedButton);
     const selectedThemeAtom = useRecoilValue(selectedTheme);
@@ -16,19 +17,23 @@ export const saveRecoilStateToConfig = async () => {
     const jsonConfig = data.stringify(data);
 
     try{
-        await invoke('save_recoil_state_to_config', jsonConfig);
+        invoke('save_recoil_state_to_config', jsonConfig);
     }catch(error) {
         console.log(error);
     }
+    */
 };
 
 
-export const loadRecoilStateFromConfig = async () => {
+export const loadRecoilStateFromConfig = () => {
+    /*
     try{
-        const response = await invoke('load_recoil_state_from_config');
+        const response = invoke('load_recoil_state_from_config');
         console.log(response);
+        return response;
     }catch(error) {
         console.log(error);
+        throw error;
     }
-    return response;
+    */
 };

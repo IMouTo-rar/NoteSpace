@@ -8,6 +8,7 @@ import { saveRecoilStateToConfig, loadRecoilStateFromConfig } from './components
 import { invoke } from '@tauri-apps/api';
 
 function App() {
+
     return (
         <ThemeProvider>
             <div className='App'>
