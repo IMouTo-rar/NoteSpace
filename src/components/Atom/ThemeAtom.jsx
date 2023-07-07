@@ -1,12 +1,12 @@
 import React from 'react';
 import { atom, selector, useRecoilState } from 'recoil';
 
-const selectedTheme = atom({
+export const selectedTheme = atom({
     key: 'selectedTheme',
     default: 'light',
 })
 
-const themeClass = selector({
+export const themeClass = selector({
     key: 'themeClass',
     get: ({ get }) => {
         const theme = get(selectedTheme);
@@ -22,7 +22,7 @@ const themeClass = selector({
     }
 })
 
-function ThemeSwitcher() {
+export function ThemeSwitcher() {
     const [theme, setTheme] = useRecoilState(selectedTheme);
 
     const toggleTheme = () => {
@@ -37,4 +37,10 @@ function ThemeSwitcher() {
     );
 }
 
-export { selectedTheme, themeClass, ThemeSwitcher };
+export function ThemeSetter(newTheme) {
+    const [theme, setTheme] = useRecoilState(selectedTheme);
+    const setNewTheme = () => {
+        setTheme(newTheme);
+    };
+    setNewTheme();
+}

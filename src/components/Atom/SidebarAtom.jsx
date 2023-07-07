@@ -13,3 +13,11 @@ export const selectedButtonLabelSelector = selector({
         return selectedButtonLabel ? selectedButtonLabel : null;
     }
 });
+
+export function ButtonSetter(newButton){
+    const [button, setButton] = useRecoilState(selectedButton);
+    const setNewButton = () => {
+        setButton(newButton);
+    };
+    setNewButton();
+}
