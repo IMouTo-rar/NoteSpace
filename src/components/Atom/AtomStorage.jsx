@@ -1,25 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import { selectedButton } from './SidebarAtom';
 import { selectedTheme } from './ThemeAtom';
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useRecoilState } from 'recoil';
 import { invoke } from '@tauri-apps/api';
 
-export const saveRecoilStateToConfig = async () => {
+export const SaveRecoilStateToConfig = () => {
+    const [result, setResult] = useState({});
     // 获取需要本地保存的Atom
-    const selectedButtonAtom = useRecoilValue(selectedButton);
-    const selectedThemeAtom = useRecoilValue(selectedTheme);
+    const [theme, setTheme] = useRecoilState(selectedTheme);
+    const [button, setButton] = useRecoilState(selectedButton);
 
-    const data = {
-        'selected_button': selectedButtonAtom,
-        'selected_theme': selectedThemeAtom
-    };
-    const jsonConfig = data.stringify(data);
+    useEffect(() => {
+        const save = async () => {
+            console.log('Saving before close...');
+            const data = {
+                'selected_button': button,
+                'selected_theme': theme
+            };
+            try {
+                setResult(await invoke("save_recoil_state_to_config", { data: data }));
+                console.log(data);
+            } catch (error) {
+                console.log(error);
+                return error;
+            }
+            await invoke('appClose');
+        };
 
-    try {
-        await invoke('save_recoil_state_to_config', jsonConfig);
-    } catch (error) {
-        console.log(error);
-    }
+        window.addEventListener('beforeunload', save);
+        return () => {
+            window.removeEventListener('beforeunload', save);
+        };
+    }, []);
+
+    return (
+        <div style={{ display: 'none' }}></div>
+    );
+
 };
 
 
@@ -32,8 +49,8 @@ export const LoadRecoilStateFromConfig = () => {
     useEffect(() => {
         const load = async () => {
             try {
-                setResult(JSON.parse(await invoke('load_recoil_state_from_config')));
                 // 从本地加载Atom
+                setResult(await invoke("load_recoil_state_from_config"));
             } catch (error) {
                 console.log(error);
                 return error;
@@ -52,7 +69,6 @@ export const LoadRecoilStateFromConfig = () => {
     }, [result]);
 
     return (
-        <div style={{display: 'none'}}>
-        </div>
+        <div style={{ display: 'none' }}></div>
     );
 };

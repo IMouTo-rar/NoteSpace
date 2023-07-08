@@ -1,0 +1,22 @@
+.editor-block {
+    width: 60rem;
+    height: 100%;
+
+    justify-self: center;
+
+   background-color: bisque; 
+}
+
+.editor-block.normal-width {
+    width: 60rem auto;
+    height: 100%;
+
+    margin: 10rem auto;
+}
+
+.editor-block.full-width {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+}

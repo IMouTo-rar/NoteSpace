@@ -11,9 +11,11 @@ fn greet(name: &str) -> String {
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet])
-        .invoke_handler(tauri::generate_handler![config::config_atoms::save_recoil_state_to_config])
-        .invoke_handler(tauri::generate_handler![config::config_atoms::load_recoil_state_from_config])
+        .invoke_handler(tauri::generate_handler![
+            config::perference::save_recoil_state_to_config,
+            config::perference::load_recoil_state_from_config,
+            greet
+            ],)
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

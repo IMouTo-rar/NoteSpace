@@ -1,5 +1,4 @@
 .footer-block {
-    grid-area: 'footer-block';
     grid-column: 1 / -1;
     grid-row: 2;
 

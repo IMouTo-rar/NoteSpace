@@ -4,7 +4,7 @@ import './App.css';
 
 import { ActivityBar, Sidebar, Panel, Footer } from './components/Primary';
 import { ThemeProvider } from './components/Theme';
-import { saveRecoilStateToConfig, LoadRecoilStateFromConfig } from './components/Atom';
+import { SaveRecoilStateToConfig, LoadRecoilStateFromConfig } from './components/Atom';
 import { selectedButton, selectedTheme } from './components/Atom';
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
     return (
         <ThemeProvider>
             <LoadRecoilStateFromConfig />
+            <SaveRecoilStateToConfig />
             <div className='App'>
                 <Sidebar />
                 <ActivityBar />

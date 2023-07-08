@@ -8,13 +8,13 @@ function Sidebar() {
     return (
         <div className='sidebar-block'>
             <div className='dynamic-area'>
-                <SidebarButton label={'Home'}/>
-                <SidebarButton label={'Files'}/>
-                <SidebarButton label={'Search'}/>
+                <SidebarButton label={'Home'} />
+                <SidebarButton label={'Files'} />
+                <SidebarButton label={'Search'} />
             </div>
             <div className='static-area'>
-                <SidebarButton label={'Account'}/>
-                <SidebarButton label={'Settings'}/>
+                <SidebarButton label={'Account'} />
+                <SidebarButton label={'Settings'} />
             </div>
         </div>
     )

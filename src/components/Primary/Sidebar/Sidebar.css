@@ -1,5 +1,4 @@
 .sidebar-block {
-    grid-area: 'sidebar-block';
     grid-column: 1;
 
     width: 3rem;

@@ -1,5 +1,4 @@
 .panel-block {
-    grid-area: 'panel-block';
     grid-column: 3;
 
     width: 100%;
@@ -7,4 +6,11 @@
 
     color: var(--text-color);
     background-color: var(--panel-background-color);
+
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+    justify-content: center;
+    /* align-content: center;     */
 }

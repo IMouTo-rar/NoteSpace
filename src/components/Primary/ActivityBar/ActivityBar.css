@@ -1,5 +1,4 @@
 .activityBar-block {
-    grid-area: 'activityBar-block';
     grid-column: 2;
     width: 15rem;
     height: 100%;
