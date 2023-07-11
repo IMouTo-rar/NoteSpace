@@ -1,17 +1,28 @@
 .activityBar-block {
     grid-column: 2;
+    max-width: 15rem;
     width: 15rem;
     height: 100%;
-    position: relative;
     overflow: auto;
     color: var(--text-color);
     border-right: var(--border-color) 1px solid;
     background-color: var(--background-color);
+    transition: all 0.3s ease;
+    
 }
 
-.activityBar-block.retracted {
-    display: none;
+.activityBar-outer {
+    width: 15rem;
+    height: 100%;
+    border-right: var(--border-color) 1px solid;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
+
+.activityBar-outer.retracted {
+    width: 0;
+    border-right: 0;
+} 
 
 .resizable {
     /* Todo */
