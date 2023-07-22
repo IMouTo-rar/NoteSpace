@@ -8,7 +8,6 @@ fn main() {
         .invoke_handler(tauri::generate_handler![
             config::perference::save_recoil_state_to_config,
             config::perference::load_recoil_state_from_config,
-            config::styleload::get_css_files,
             ],)
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

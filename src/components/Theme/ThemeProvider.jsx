@@ -3,9 +3,7 @@ import { useRecoilValue } from 'recoil';
 import { themeClass } from '../Primary/Atom';
 
 // 引入主题颜色样式
-import './CSS/dark-theme.css';
-import './CSS/light-theme.css';
-
+import 'themes.css';
 function ThemeProvider({children}) {
 
     const themeClassName = useRecoilValue(themeClass);
