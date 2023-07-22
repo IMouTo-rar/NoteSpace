@@ -9,6 +9,7 @@
     background-color: var(--background-color);
 
     font-size: 0.7rem;
+    padding: 0 0.5rem;
 
     display: grid;
     place-items: start;

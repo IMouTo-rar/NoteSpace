@@ -23,7 +23,7 @@ impl fmt::Display for Atoms {
 // 将Atom数据保存到文件中
 #[tauri::command]
 pub fn save_recoil_state_to_config(data: serde_json::Value) -> Result<(), Error> {
-    let conf_path = "../config/perference.json";
+    let conf_path = "../outer/config/perference.json";
 
     // 解析json to Atoms
     let atoms: Atoms = match serde_json::from_value(data) {
@@ -46,7 +46,7 @@ pub fn save_recoil_state_to_config(data: serde_json::Value) -> Result<(), Error>
 // 从文件中加载Atom数据
 #[tauri::command]
 pub fn load_recoil_state_from_config() -> serde_json::Value {
-    let conf_path = "../config/perference.json";
+    let conf_path = "../outer/config/perference.json";
 
     // 读取数据
     let content = match fs::read_to_string(conf_path) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ThemeSwitcher } from '../../Atom'
+import { ThemeSwitcher } from '../../Primary/Atom'
 
 export default function Settings() {
   return (

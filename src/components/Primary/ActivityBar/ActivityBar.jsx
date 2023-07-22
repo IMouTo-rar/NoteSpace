@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRecoilValue } from 'recoil';
-import { selectedButtonLabelSelector } from '../../Atom';
+import { selectedButtonLabelSelector } from '../Atom';
 import './ActivityBar.css';
 
 import { Account, Files, Home, Info, Search, Settings } from '../../Page/Activity';

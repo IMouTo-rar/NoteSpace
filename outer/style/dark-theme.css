@@ -1,0 +1,18 @@
+.dark-theme {
+    --primary-color: #2a9fd6;
+    --background-color: #1e1e1e;
+    --sidebar-background-color: #333333;
+    --panel-background-color: #333333;
+    --text-color: #ffffff;
+    --sidebar-text-color: #cccccc;
+    --border-color: #444444;
+    --button-background-color: #2a9fd6;
+    --button-text-color: #ffffff;
+    --link-color: #2a9fd6;
+    --warning-color: #f4d03f;
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+    --code-highlight-color: #f9d423;
+    --icon-color: #ffffff;
+    --icon-hover-color: #cccccc;
+}
