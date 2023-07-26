@@ -12,25 +12,16 @@ export const SaveRecoilStateToConfig = () => {
 
     useEffect(() => {
         const save = async () => {
-            console.log('Saving before close...');
+            console.log('Saving');
             const data = {
                 'selected_button': button,
                 'selected_theme': theme
             };
-            try {
-                setResult(await invoke("save_recoil_state_to_config", { data: data }));
-                console.log(data);
-            } catch (error) {
-                console.log(error);
-                return error;
-            }
-            await invoke('appClose');
+            await invoke("save_recoil_state_to_config", { data: data })
+                .then((res) => { setResult(res); })
+                .catch((err) => { console.log(err); });
         };
-
-        window.addEventListener('beforeunload', save);
-        return () => {
-            window.removeEventListener('beforeunload', save);
-        };
+        // save();
     }, []);
 
     return (
@@ -48,13 +39,10 @@ export const LoadRecoilStateFromConfig = () => {
 
     useEffect(() => {
         const load = async () => {
-            try {
-                // 从本地加载Atom
-                setResult(await invoke("load_recoil_state_from_config"));
-            } catch (error) {
-                console.log(error);
-                return error;
-            }
+            console.log('Loading');
+            await invoke("load_recoil_state_from_config")
+                .then((res) => { setResult(res); })
+                .catch((err) => { console.log(err); });
         };
         load();
     }, []);

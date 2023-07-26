@@ -1,0 +1,44 @@
+{
+    "keywords":[
+        {
+            "name": "H1",
+            "description": "H1 is the most important heading tag. It should be used only once per page."
+        },
+        {
+            "name": "H2",
+            "description": "H2 is the second most important heading tag. It should be used only once per page."
+        },
+        {
+            "name": "H3",
+            "description": "H3 is the third most important heading tag. It should be used only once per page."
+        },
+        {
+            "name": "table",
+            "description": "Table is used to display tabular data."
+        },
+        {
+            "name": "link",
+            "description": "Link is used to display a link to another page."
+        },
+        {
+            "name": "image",
+            "description": "Image is used to display an image."
+        },
+        {
+            "name": "music",
+            "description": "Music is used to display a music file."
+        },
+        {
+            "name": "video",
+            "description": "Video is used to display a video file."
+        },
+        {
+            "name": "code",
+            "description": "Code is used to display a code snippet."
+        },
+        {
+            "name": "equation",
+            "description": "Equation is used to display a mathematical equation."
+        }
+    ]
+}
