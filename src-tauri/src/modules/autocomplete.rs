@@ -47,6 +47,7 @@ pub fn autocomplete(state: tauri::State<'_, Dictionary>, input: &str) -> Result<
                 completions.push(word.to_string());
             }
         }
+        completions.sort();
         Ok(completions)
     } else {
         Ok(Vec::new())

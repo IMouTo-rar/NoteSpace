@@ -1,12 +1,12 @@
 import React from 'react'
 import './Editor.css';
 
-import { Music, Input } from '../../../user-components';
+import { Music, Text } from '../../../user-components';
 
 function Editor() {
   return (
     <div className='editor-block'>
-        <Input />
+        <Text />
     </div>
   )
 }

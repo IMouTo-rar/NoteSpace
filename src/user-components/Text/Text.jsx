@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { invoke } from '@tauri-apps/api';
-import './Input.css';
+import './Text.css';
 
-function Input() {
+function Text() {
     const [inputValue, setInputValue] = useState('');
 
     const handleChange = (e) => {
@@ -12,7 +12,7 @@ function Input() {
     };
 
     return (
-        <div className='input-block'>
+        <div className='text-block'>
             <div
                 contentEditable={true}
                 spellCheck={false}
@@ -48,4 +48,4 @@ function Autocomplete({ input }) {
     );
 }
 
-export default Input;
+export default Text;
